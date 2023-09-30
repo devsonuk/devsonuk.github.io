@@ -449,7 +449,7 @@ section {
 }
 
 /* Add a circular box to the bottom of the last .resume-item */
-.resume .resume-item:last-child::after {
+.resume .resume-item:last-child::after, .resume .last-item::after {
   content: "";
   position: absolute;
   width: 16px;
@@ -652,6 +652,18 @@ section {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
+}
+
+.image-container {
+  padding: 16px;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.skill-img {
+  max-width: 100px;
+  max-height: 100px;
 }
 
 /*--------------------------------------------------------------
