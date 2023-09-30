@@ -247,4 +247,33 @@
     })
   });
 
+  emailjs.init('OqyuXCJn-Ao2lsdZe');
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    const contactForm = document.querySelector("#contact-form");
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        document.querySelector('.loading').classList.add('d-block');
+        document.querySelector('.error-message').classList.remove('d-block');
+        document.querySelector('.sent-message').classList.remove('d-block');
+
+        // these IDs from the previous steps
+        emailjs.sendForm('service_q21d058', 'template_lpcufpa', this)
+            .then(function() {
+                console.log('SUCCESS!');
+                document.querySelector('.sent-message').classList.add('d-block');
+                document.querySelector("#contact-form").reset();
+                document.querySelector('.loading').classList.remove('d-block');
+            }, function(error) {
+                console.log('FAILED...', error);
+                document.querySelector('.loading').classList.remove('d-block');
+            });
+      });
+    }
+  });
+
 })()
