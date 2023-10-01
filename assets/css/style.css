@@ -414,7 +414,6 @@ section {
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
-  text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #050d18;
   margin-bottom: 10px;
@@ -461,6 +460,25 @@ section {
   border: 2px solid #51b848;
 }
 
+.company-logo {
+  height: 32px;
+}
+
+.company-tag {
+  color: #050d18;
+}
+.company-tag:hover {
+  color: #51b848 !important;
+}
+
+.resume-download {
+  font-size: 22px;
+  transition: color 0.5s ease;
+}
+
+.resume-download:hover {
+  color: rgba(81, 184, 72, 0.5);
+}
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
